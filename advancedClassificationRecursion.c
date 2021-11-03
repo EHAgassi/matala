@@ -58,8 +58,8 @@ int isPalindrome(int num)
 }
  
 
-int main()
-{
-    int a = isPalindrome(1011);
-printf("%d", a );
-}
+// int main()
+// {
+//     int a = isPalindrome(1011);
+// printf("%d", a );
+// }
