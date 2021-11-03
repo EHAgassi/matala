@@ -37,7 +37,7 @@ maindrec: $(OBJECTS_MAIN) libclassrec.so
 all:loops loopd recursived recursives mains maindloop maindrec
 
 clean : 
-		rm -f *.o *.a *.so  mains maindloop maindrec
+		rm -f *.o *.a *.so *.exe  mains maindloop maindrec
 
 basicClassification.o: $(OBJECTS_CLASS) basicClassification.c
 	$(CC) $(FLAGS) -c basicClassification.c

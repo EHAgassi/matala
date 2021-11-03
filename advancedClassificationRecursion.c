@@ -3,6 +3,7 @@
 #include "NumClass.h"
 int numDigit(int);
 int isArm(int, int);
+ int reverse(int num);
 
 int isArmstrong(int num)
 {
@@ -37,31 +38,21 @@ int numDigit(int num)
 
 int isPalindrome(int num)
 {
-    int nDigit = numDigit(num); 
-    if(nDigit==1 || nDigit==0){
+
+    if(num == reverse(num))
+    {
         return 1;
     }
-    double firstCh = (num / pow(10 ,nDigit-1));
-    if(num%10!= (int)firstCh)
-    {
-        return 0;
-    }
-    num -= ((int)firstCh)*pow(10.0, nDigit-1.0);
-    num-= num%10;
-    num/=10;
-    return isPalindrome(num);
+    
+    return 0;
 }
 
-// int main()
-// {int a,b=4564;
-// //   for(int i = 0; i<1000;i++){
-// //     if (isPalindrom(i))
-// //     {
-// //       /* code */
-// //     }    
-// //   }
 
-// a = isPalindrome(b);
-//     printf("%d\n", a);
-//     return 0;
-// }
+   int reverse(int num)
+{
+    int digit = (int)log10(num);
+    if(num == 0)
+        return 0;
+
+    return ((num%10 * pow(10, digit)) + reverse(num/10));
+}
