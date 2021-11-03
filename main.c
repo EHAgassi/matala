@@ -46,7 +46,7 @@ printf("\nThe Strong numbers are:");
             printf(" %d",i);
             }
         }
-    
+    printf("\n");
     return 0;
 
 }

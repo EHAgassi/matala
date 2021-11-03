@@ -56,3 +56,10 @@ int isPalindrome(int num)
 
     return ((num%10 * pow(10, digit)) + reverse(num/10));
 }
+ 
+
+int main()
+{
+    int a = isPalindrome(1011);
+printf("%d", a );
+}
